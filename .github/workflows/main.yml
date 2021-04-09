@@ -27,3 +27,10 @@ jobs:
       - uses: ilammy/msvc-dev-cmd@v1
       - name: build
         run: cl /EHsc hello.cpp /out:hello_gha.exe
+        
+      - name: 'Upload Artifact'
+        uses: actions/upload-artifact@v2
+        with: 
+          name: ${{GITHUB_HEAD_REF}}_${{GITHUB_ACTOR}}-artifact
+          path: ".exe"
+          retention-days: 1
