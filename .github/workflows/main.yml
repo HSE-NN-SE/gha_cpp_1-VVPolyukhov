@@ -27,7 +27,7 @@ jobs:
       - uses: ilammy/msvc-dev-cmd@v1
       
       - name: build
-        run: cl /EHsc hello.cpp /link /out:hello_gha.exe
+        run: cl /EHsc quick_sort.cpp quick_sort.h /link /out:sort.exe
         
       - name: ls
         run: ls
