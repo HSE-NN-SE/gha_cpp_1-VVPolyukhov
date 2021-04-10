@@ -27,7 +27,7 @@ jobs:
       - uses: ilammy/msvc-dev-cmd@v1
       
       - name: build
-        run: cl /EHsc hello.cpp /link /out:hello_gha.exe
+        run: cl /EHsc main.cpp ocean.cpp predator.cpp prey.cpp stone.cpp object.cpp cell.cpp /link /out:ocean.exe
         
       - name: ls
         run: ls
